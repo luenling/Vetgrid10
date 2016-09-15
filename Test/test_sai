@@ -1,0 +1,35 @@
+[bwa_aln] 17bp reads: max_diff = 2
+[bwa_aln] 22bp reads: max_diff = 3
+[bwa_aln] 42bp reads: max_diff = 4
+[bwa_aln] 64bp reads: max_diff = 5
+[bwa_aln] 90bp reads: max_diff = 6
+[bwa_aln] 117bp reads: max_diff = 7
+[bwa_aln] 146bp reads: max_diff = 8
+[bwa_aln] 176bp reads: max_diff = 9
+[bwa_aln] 207bp reads: max_diff = 10
+[bwa_aln] 239bp reads: max_diff = 11
+[bwa_aln_core] calculate SA coordinate... 18278.03 sec
+[bwa_aln_core] write to the disk... ^C^@^@^@^K^@^@^@^D^@^@^@^B^@^@^@^E^@^@^@^L^@^@^@<80><84>^^^@
+<D7>#<<FF><FF><FF><FF>^A^@^@^@^L^@^@^@^B^@^@^@<C8>^@^@^@
+^@^@^@^^^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^A<FB>z<9C>^@<FB>z<9C>^@^@^@^@^@^A^@^@^@^@^@^@^A*<83>N^B.<83>N^B^@
+^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@<D4><88>)^@<D4><88>)^@^@^@^@^@^B^@^@^@^@^@^@^A<80><D3>b^B<9F><D3>b^B^@^@^@^@^@^@
+^@^@3^K{^EH^K{^E^@^@^@^@^A^@^@^@^@^@^@^A<98><CA>/^E<98><CA>/^E^@^@^@^@^A^@^@^@^@^@^@^A$     <F3>^@$ <F3>^@^@^@
+^@^@^A^@^@^@^@^@^@^A8<9F><C4>^D:<9F><C4>^D^@^@^@^@^B^@^@^@^@^@^@^A<A2>^Tf^@<A2>^Tf^@^@^@^@^@^@^@^@^@<C7>mx^G
+<C8>mx^G^@^@^@^@^A^@^@^@^@^@^@^A<E1><FF><EF>^E<E2><FF><EF>^E^@^@^@^@^B^@^@^@^@^@^@^AZESCS^B[ESCS^B^@^@^@^@^A^@
+^@^A\ESCS^B\ESCS^B^C^@^@^@^A^@^@^@^@^@^@^@<D4><87>l^E<D4><87>l^E^@^@^@^@^A^@^@^@^A^@^@^A<FF>gU^@<FF>gU^@^C^@^@
+^@^A^@^@^@^A^@^@^@u<AD><F9>^Du<AD><F9>^D^C^@^@^@^A^@^@^@^@^@^@^@<E7><FA>!^B<E8><FA>!^B^@^@^@^@^A^@^@^@^@^@^@^A
+<EA><F0>^R^D<EA><F0>^R^D^@^@^@^@^AC<AF>ESC<A3>^C^@^@^@^@^A^@^@^@^@^@^@^@<DF>wF^D<DF>wF^D^@^@^@^@^A^@^@^@^@^@^@^A<B7> ^P^E<B7> ^P^E^@^@^@^@^A^@^@
+^@^D^@^@^@<F3><E6>^U^A<F3><E6>^U^A^L^@^@^@^A^@^@^@^B^@^@^A^BKy^E^BKy^E^F^@^@^@^A^@^@^@^@^@^@^@<AB>xv^C<AB>xv^C^@^@^@^@^A^@^@^@^A^@^@^A<9F>^L<BC>^@<A0>^L<BC>^@^C^@^@^@0.06 sec
+[bwa_aln_core] 262144 sequences have been processed.
+[bwa_aln_core] calculate SA coordinate... 18142.86 sec
+[bwa_aln_core] write to the disk... ^A^@^@^@^@^@^@^@~<C1><8E>^@^?<C1><8E>^@^@^@^@^@^A^@^@^@^A^@^@^A<F7><94>^K^F
+<F7><94>^K^F^C^@^@^@^A^@^@^@^A^@^@^A<89>J#^A<89>J#^A^C^@^@^@^A^@^@^@^@^@^@^@<E2>*<F5>^E<E2>*<F5>^E^@^@^@^@^A^@^@^@^A^@^@^A[)0^C[)0^C^C^@^@^@^A^@^@^@^B^@^@^A9<9E>A^D9<9E>A^D^F^@^@^@^A^@^@^@^@^@^@^An<BA><A8>^En<BA><A8>^E^@^@^@^@^A^@^@^@^D^@^@^Alx~^Clx~^C^L^@^@^@^A^@^@^@^@^@^@^@^M^Oq^E^M^Oq^E^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@<E9><8B><88>^C<E9><8B><88>^C^@^@^@^@^B^@^@^@^@^@^@^A<AA><80>v^@<AA><80>v^@^@^@^@^@^@^@^@^@<D2><E5>g^G<D5><E5>g^G^@^@^@
+^@^A^@^@^@^@^@^@^A<9A><E2><E2>^A<9A><E2><E2>^A^@^@^@^@^A^@^@^@^E^@^@^AW`<94>^CW`<94>^C^O^@^@^@^A^@^@^@^A^@^@^@/
+<F0>d^B/
+>^@^C^@^@^@0.08 sec
+[bwa_aln_core] 11272192 sequences have been processed.
+[bwa_aln_core] calculate SA coordinate... 
+<8B>E^G^F^@^@^@^A^@^@^@^D^@^@^A<85><84>`^@<85><84>blub
+`^@^L^@^@^@^A^@^@^@^B^@^@^@<C5><EB><BC>^A<C5><EB><BC>^A^F^@^@^@^A^@^@^@^B^@^@^A0.04 sec
+[bwa_aln_core] 50000000 sequences have been processed.
+77d^D77d^D^F^@^@^@^@^@^@^@^A^@^@^@^C^@^@^A<CC>Y^G^C<CC>Y

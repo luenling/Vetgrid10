@@ -1,0 +1,12 @@
+creating pileup females_popI_po2_femVie2011.mpileup out of splitgz.sh ../Perl/test/test.sync at Thu Dec 20 16:23:32 CET 2012
+/Volumes/Temp/Lukas/Tools/samtools-0.1.18/samtools mpileup -6 -B -Q 0 -f /Volumes/Temp/Lukas/reference_genome/ref_genome_combined.fa > females_popI_po2_femVie2011.mpileup
+finished joining splitgz.sh ../Perl/test/test.sync to at Thu Dec 20 16:23:32 CET 2012
+creating pileup femVie2011_popI_po2_unfiltered.mpileup out of splitgz.sh ../Perl/test/test.sync at Thu Dec 20 16:24:21 CET 2012
+/Volumes/Temp/Lukas/Tools/samtools-0.1.18/samtools mpileup -6 -B -Q 0 -f /Volumes/Temp/Lukas/reference_genome/ref_genome_combined.fa > femVie2011_popI_po2_unfiltered.mpileup
+finished joining splitgz.sh ../Perl/test/test.sync to at Thu Dec 20 16:24:21 CET 2012
+creating pileup femVie2011_popI_po2_unfiltered.mpileup out of splitgz.sh test.sync at Thu Dec 20 16:28:44 CET 2012
+/Volumes/Temp/Lukas/Tools/samtools-0.1.18/samtools mpileup -6 -B -Q 0 -f /Volumes/Temp/Lukas/reference_genome/ref_genome_combined.fa splitgz.sh ../Perl/test/test.sync > femVie2011_popI_po2_unfiltered.mpileup
+finished joining splitgz.sh ../Perl/test/test.sync to at Thu Dec 20 16:28:44 CET 2012
+creating pileup females_popI_po2_femVie2011.mpileup out of test2.bam test.bam at Thu Dec 20 16:32:11 CET 2012
+/Volumes/Temp/Lukas/Tools/samtools-0.1.18/samtools mpileup -6 -B -Q 0 -f /Volumes/Temp/Lukas/reference_genome/ref_genome_combined.fa test2.bam test.bam > females_popI_po2_femVie2011.mpileup
+finished joining test2.bam test.bam to at Thu Dec 20 16:32:11 CET 2012

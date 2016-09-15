@@ -1,0 +1,9 @@
+perl -e 'local($/); $data = <>; $data =~ s/(d+\.?\d+\s+sec| \[bwa).*?to\s+the\s+disk\.\.\.\s//gs; print $data'
+perl -e 'local($/); $data = <>; $data =~ s/\[bwa.*//gs; print $data'
+cat test_sai | perl -e 'local($/); $data = <>;  $data =~ s/\d+\.?\d+\s+sec\n//g;  $data =~ s/\[bwa.*?(\d|processed\.|\.\.\.+\s?)\n//g;   print $data'
+cat test_sai | perl -e 'local($/); $data = <>; $data =~ s/(\d+\.?\d+\s+sec|\[bwa).*?disk\.+\s+//gs;   $data =~ s/\d+\.?\d+\s+sec.*?processed\.\n//gs; print $data'
+cat test_a.sai | perl -e 'local($/); $data = <>;$data =~ s/\[bwa.*?(\d\n|processed\.\n|\.\.\s+\n?|sec\n)//g;    $data =~ s/\d+\.?\d+\s+sec\n//g;   print $data' > test_b.sai
+cat test_a.sai | perl -e 'local($/); $data = <>;$data =~ s/\[bwa.*?(\d\n|processed\.\n|\.\.\.\s\n?|sec\n)//g;    $data =~ s/\d+\.?\d+\s+sec\s*\n//g;   print $data' > test_b.sai
+
+IN=`basename $1 .bam`
+samtools view -h  $IN.bam |  awk ' (/^@/ || ($3!=$7 && $7=="=")) {print;}' | samtools  view -bSh - > $IN_chrfilt.bam 

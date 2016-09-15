@@ -1,0 +1,3 @@
+creating pileup females_popI_po2_femVie2011.mpileup out of test2.bam test.bam at Thu Dec 20 16:35:59 CET 2012
+/Volumes/Temp/Lukas/Tools/samtools-0.1.18/samtools mpileup -6 -B -Q 0 -f /Volumes/Temp/Lukas/reference_genome/ref_genome_combined.fa Test/test2.bam Test/test.bam > females_popI_po2_femVie2011.mpileup
+finished joining Test/test2.bam Test/test.bam to at Thu Dec 20 16:36:00 CET 2012

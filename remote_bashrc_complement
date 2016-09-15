@@ -1,0 +1,73 @@
+# source for remote logins
+# set some vars
+#POPO="/Applications/tools/popoolation"
+#POPO2="/Applications/tools/popoolation2"
+export TERM=linux
+# set terminal title:
+echo -n -e "\033]0;${USER}@${HOSTNAME%%.*}\007"
+# history handling Erase duplicates
+export HISTCONTROL=erasedups
+# resize history size
+export HISTSIZE=10000
+# append to bash_history if Terminal.app quits
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Define how Bash prompt looks like:
+#
+# User @ Host – working dir
+#export PS1="\u@\h\w$ "
+export PS1="\[\e[32m\]\u@\h:\[\e[34;1m\]\w \[\e[0m\] > "
+
+# Cli Colors
+export CLICOLOR=1
+# use yellow for dir’s
+export LSCOLORS=exfxbxdxcxegedabagacad
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    eval "`dircolors -b`"
+    alias ls='ls -G'
+  #  alias dir='dir --color=auto'
+  #  alias vdir='vdir --color=auto'
+
+    alias grep='grep --color'
+    alias fgrep='fgrep --color'
+    alias egrep='egrep --color'
+fi
+
+# some more ls aliases
+alias ll='ls -l'
+# alias l='ls -CF'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias bbcp='bbcp -T "ssh -l %U %H "/Volumes/Temp/Lukas/Tools/bin/bbcp -S /Volumes/Temp/Lukas/Tools/bin/bbcp '
+
+
+# extended globbing
+shopt -s extglob
+#path 
+PATH=/Volumes/Temp/Lukas/Tools/bin:$PATH
