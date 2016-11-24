@@ -12,12 +12,12 @@ parser = argparse.ArgumentParser(description='Filter a bam file by read barcodes
 parser.add_argument("--in", dest="infile", help="bam file with tagged reads", required=True)
 parser.add_argument("--tags", dest="tags", help="comma separated list of tags (eg: \"TGACCAAT,ACAGTGAT,GCCAATAT,CTTGTAAT\") or pairs of ids and tags (eg: \"light_RI:TGACCAAT,light_RII:ACAGTGAT,dark_RI:GCCAATAT,dark_RII:CTTGTAAT\") ", required=True)
 parser.add_argument("--subs", dest="subs", type=int, help="maximal number of substitutions in tag sequence (default=1)", default=1)
-
 args = parser.parse_args()
 infile = vars(args)['infile']
 subs = vars(args)['subs']
 tags= vars(args)['tags'].split(",")
 ids=list(tags)
+
 for i,tag in enumerate(tags):
 	if (re.search(":",tag)):
 		(ids[i],tags[i])=tags[i].split(":")
@@ -32,7 +32,7 @@ outfiles=[]
 base_name=os.path.basename(infile)
 # get rid of trailing bam
 base_name=re.sub("\.bam(?=$)","",base_name)
-samfile=pysam.Samfile(infile,"rb")
+samfile=pysam.Samfile(infile,"rb",check_sq=False)
 tag_files=collections.defaultdict()
 tag_count=collections.defaultdict(int)
 tag_pats=collections.defaultdict()
@@ -42,20 +42,21 @@ for i,tag in enumerate(tags):
 	tag_files[tag]=pysam.Samfile(base_name+"_"+ids[i]+".bam","wb",template=samfile)
 	tag_pats[tag]=regex.compile("(?:"+tag+"){s<="+str(subs)+"}")
 
+
 ## split BAM file
 for entry in samfile.fetch(until_eof=True):
-	read_tag=entry.qname.split('#')[-1]
-	count+=1
-	for tag in tags:
-		if regex.match(tag_pats[tag],read_tag):
-			tag_count[tag] += 1
-			tag_files[tag].write(entry)
-			break
+    read_tag=entry.qname.split('#')[-1]
+    count+=1
+    for tag in tags:
+        if regex.match(tag_pats[tag],read_tag):
+            tag_count[tag] += 1
+            tag_files[tag].write(entry)
+            break
 print "reads read:\t{}".format(count)
 tot_tag=0
 for tag in tags:
-	print "tag {}:\t{}".format(tag,tag_count[tag])
-	tot_tag += tag_count[tag]
-	tag_files[tag].close
+    print "tag {}:\t{}".format(tag,tag_count[tag])
+    tot_tag += tag_count[tag]
+    tag_files[tag].close
 print "reads not taggged:\t{}".format(count-tot_tag)
 samfile.close() 
